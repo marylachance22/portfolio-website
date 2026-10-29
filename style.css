@@ -50,11 +50,23 @@ a {
   top: 540px;
 }
 
+
+/* Sticky navigation - desktop and mobile */
 .site-header {
-  padding: 26px 0;
-  position: relative;
-  z-index: 10;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* Matches your existing lavender website aesthetic */
+  background: rgba(246, 240, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(143, 85, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(79, 37, 138, 0.05);
 }
+
 
 .navbar,
 .hero,
@@ -1339,5 +1351,24 @@ a {
 
   .hero-visual .sparkle {
     display: none;
+  }
+}
+
+/* Compact sticky navigation on mobile */
+@media (max-width: 640px) {
+  .site-header {
+    padding: 12px 0;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 10px 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
   }
 }
